@@ -1,0 +1,116 @@
+header {
+    border-bottom: 1px solid #F5F5F5; 
+    /*position: fixed;
+    width: 100%;
+    z-index: 200;*/
+}
+
+.navbar-nav .nav-link {
+    color: var(--secondary);
+    font-size: 1.125rem;
+    font-weight: 400;
+    text-align: center; 
+    position: relative;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-nav .nav-link::before,
+.navbar-nav .nav-link.active::before {
+    content: "";
+    position: absolute;
+    width: 50%; 
+    height: 4px;
+    background-color: var(--primary);
+    bottom: 0;
+    left: 25%;
+    border-radius: 0.5rem;
+    transform: scaleX(0); 
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--secondary);
+}
+
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link.active::before {
+    transform: scaleX(1); 
+    transform-origin: bottom left;
+    color: var(--secondary);
+}
+
+@media screen and (max-width: 992px) {
+
+    .navbar-nav .nav-link::before,
+    .navbar-nav .nav-link.active::before {
+        width: 10%; 
+        left: 45%;
+    }
+
+    .navbar-nav .nav-link {
+        margin-bottom: 1rem;
+    }
+
+    .navbar-nav .nav-link:last-of-type {
+        margin-bottom: 0rem;
+    }
+
+}
+
+/* Navbar toggler */
+.navbar-toggler,
+.navbar-toggler:focus {
+    border: 0;
+    box-shadow: unset;
+}
+
+/* Define the shape and color of the hamburger lines */
+.navbar-toggler span {
+    display: block;
+    background-color: var(--primary);
+    height: 4px;
+    width: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    left: 0;
+    opacity: 1;
+    transition: all 0.2s ease-out;
+    transform-origin: center left;
+    border-radius: 0.5rem;
+}
+
+.navbar-toggler span:nth-child(1) {
+    margin-top: 0.3em;
+}
+
+/* Animate collapse into X. */
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    transform: translate(15%, -33%) rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    transform: translate(15%, 33%) rotate(-45deg) ;
+}
+
+/* Animate collapse open into hamburger menu */
+.navbar-toggler span:nth-child(1) {
+    transform: translate(0%, 0%) rotate(0deg) ;
+}
+
+.navbar-toggler span:nth-child(2) {
+    opacity: 1;
+}
+
+.navbar-toggler span:nth-child(3) {
+    transform: translate(0%, 0%) rotate(0deg) ;
+}
+
