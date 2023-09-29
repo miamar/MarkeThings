@@ -52,11 +52,8 @@ header {
     }
 
     .navbar-nav .nav-link {
-        margin-bottom: 1rem;
-    }
-
-    .navbar-nav .nav-link:last-of-type {
-        margin-bottom: 0rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
     }
 
 }
