@@ -2,13 +2,13 @@ function initIntro() {
 
     let tl = gsap.timeline({delay: 0.5});
      
-    tl.from('h1', {
+    tl.from('.hero h1', {
         y: -40,
         opacity: 0,
         duration: 2,
         ease: 'power4'
     })
-    .from('.p-big', {
+    .from('.hero .p-big', {
         y: -20,
         opacity: 0,
         duration: 2,
@@ -20,10 +20,24 @@ function initIntro() {
         duration: 2,
         ease: 'power4'
     }, 0.1)
-    .to('span', {
+    .to('.hero span', {
         color: '#A2CA66',
         duration: 0.5,
     }, 1)
+
+}
+
+function initProblema() {
+    // Create a ScrollTrigger animation
+    gsap.to({
+        scrollTrigger: {
+            trigger: ".problema",
+            start: "top center", // When to start the animation
+            end: "bottom center", // When to end the animation
+            toggleClass: ["scrolled", ""], // Add "scrolled", remove ""
+            markers: true, // Display debug markers (for testing)
+        }
+    });
 
 }
 
@@ -153,7 +167,23 @@ function initArchitettura() {
         )
 
         .from(
+            "[data-slide='8'] ", {
+              opacity: 0,
+              duration: 0.5,
+            },
+            "+=1"
+        )
+
+        .to(
             "[data-slide='8']", {
+              duration: 0.5,
+              ease: "power4"
+            },
+            "+=10"
+        )
+
+        .from(
+            "[data-slide='9']", {
               opacity: 0,
               duration: 0.5,
               stagger: 1
@@ -166,5 +196,6 @@ function initArchitettura() {
 
 window.onload = () => {
 	initIntro();
-    initArchitettura()
+    initProblema();
+    initArchitettura();
 };

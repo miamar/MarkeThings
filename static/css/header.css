@@ -1,9 +1,6 @@
 header {
     border-bottom: 1px solid #F5F5F5; 
     background-color: var(--white);
-    /*position: fixed;
-    width: 100%;
-    z-index: 200;*/
 }
 
 .navbar-nav .nav-link {

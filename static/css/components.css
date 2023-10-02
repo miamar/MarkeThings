@@ -17,13 +17,46 @@
     display: none;
 }
 
+/* Il problema -> la soluzione */
+.problema .grey,
+.problema .scrolled .green {
+    border-radius: .7rem;
+    background-color: var(--light);
+}
+
+.problema h3 {
+    text-transform: uppercase;
+}
+
+.problema .p-big .grey {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.problema .p-medium {
+    font-weight: 300;
+}
+
+.problema b {
+    font-weight: 600!important;
+}
+
+
+.problema .green,
+.problema .scrolled .grey{
+    background-color: var(--infofactory);
+    border-radius: .7rem;
+}
+
+.problema .green h3,
+.problema .green .p-big,
+.problema .green .p-medium {
+    color: var(--white);
+}
+
 /* Architettura generale*/
 .architettura {
-    display: flex;
-    flex-direction: column;
     text-align: center;
-    justify-content: center;
-    align-items: center;
 }
 
 .architettura .slide-container {
