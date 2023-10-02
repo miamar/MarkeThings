@@ -8,7 +8,7 @@ function initIntro() {
         duration: 2,
         ease: 'power4'
     })
-    .from('.p-sbig', {
+    .from('.p-big', {
         y: -20,
         opacity: 0,
         duration: 2,
@@ -27,6 +27,144 @@ function initIntro() {
 
 }
 
+function initArchitettura() {
+
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".architettura",
+          pin: true,
+          scrub: true,
+          start: "top top",
+          toggleActions: "restart pause resume pause"
+        }
+      });
+    
+      // Slides Scroll Animation
+      tl.from(
+          "[data-slide='1'] ", {
+            opacity: 0,
+            duration: 0.5
+          },
+          "+=1"
+        )
+    
+        .to(
+          "[data-slide='1'] ", {
+            duration: 0.5,
+            ease: "power4"
+          },
+          "+=10"
+        )
+    
+        .from(
+          "[data-slide='2'] ", {
+            opacity: 0,
+            duration: 0.5,
+          },
+          "+=1"
+        )
+        
+        .to(
+          "[data-slide='2']", {
+            duration: 0.5,
+            ease: "power4"
+          },
+          "+=10"
+        )
+    
+        .from(
+            "[data-slide='3'] ", {
+              opacity: 0,
+              duration: 0.5,
+            },
+            "+=1"
+        )
+
+        .to(
+            "[data-slide='3']", {
+              duration: 0.5,
+              ease: "power4"
+            },
+            "+=10"
+        )
+
+        .from(
+            "[data-slide='4'] ", {
+              opacity: 0,
+              duration: 0.5,
+            },
+            "+=1"
+        )
+
+        .to(
+            "[data-slide='4']", {
+              duration: 0.5,
+              ease: "power4"
+            },
+            "+=10"
+        )
+
+        .from(
+            "[data-slide='5'] ", {
+              opacity: 0,
+              duration: 0.5,
+            },
+            "+=1"
+        )
+
+        .to(
+            "[data-slide='5']", {
+              duration: 0.5,
+              ease: "power4"
+            },
+            "+=10"
+        )
+
+        .from(
+            "[data-slide='6'] ", {
+              opacity: 0,
+              duration: 0.5,
+            },
+            "+=1"
+        )
+
+        .to(
+            "[data-slide='6']", {
+              duration: 0.5,
+              ease: "power4"
+            },
+            "+=10"
+        )
+
+        .from(
+            "[data-slide='7'] ", {
+              opacity: 0,
+              duration: 0.5,
+            },
+            "+=1"
+        )
+
+        .to(
+            "[data-slide='7']", {
+              duration: 0.5,
+              ease: "power4"
+            },
+            "+=10"
+        )
+
+        .from(
+            "[data-slide='8']", {
+              opacity: 0,
+              duration: 0.5,
+              stagger: 1
+            },
+            "+=1"
+        ) 
+}
+
+
+
 window.onload = () => {
 	initIntro();
+    initArchitettura()
 };
