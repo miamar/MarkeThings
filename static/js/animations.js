@@ -23,7 +23,7 @@ function initIntro() {
     .to('span', {
         color: '#A2CA66',
         duration: 0.5,
-    }, 2)
+    }, 1)
 
 }
 

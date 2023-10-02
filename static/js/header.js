@@ -1,8 +1,9 @@
 // Add scroll event handler
 $(window).scroll(function() {
+    var header = $("header");
     if ($(this).scrollTop() > 0) {
-      $(".navbar").addClass("navbar-scrolled");
+        header.addClass("scrolled");
     } else {
-      $(".navbar").removeClass("navbar-scrolled");
+        header.removeClass("scrolled");
     }
-  });
+});
