@@ -1,0 +1,51 @@
+/* Hero */
+.hero {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+.hero-img,
+.hero-img2 {
+    width: 100vw;
+}
+
+.hero-img2 {
+    display: none;
+}
+
+
+@media all and (max-width: 992px) {
+
+    .hero h1, 
+    .hero .p-big{
+      width: 100%!important;
+    }
+
+    .hero .p-big {
+      display: none;
+    }
+
+    .hero-img {
+        display: none;
+    }
+
+    .hero-img2 {
+        display: block;
+    }
+
+}
+
+@media all and (max-width: 768px) {
+
+    .hero h1 {
+      font-size: 4rem;
+      text-align: left;
+    }
+
+}
+
+
