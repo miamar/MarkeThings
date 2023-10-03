@@ -70,6 +70,31 @@
     color: var(--white);
 }
 
+/* Funzionalità techniche */
+.funzionalità .row {
+    background-color: var(--light);
+}
+
+.funzionalità .card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: none;
+    padding: 1rem;
+    background-color: transparent;
+}
+
+.funzionalità img {
+    height: 4.5rem;
+}
+
+@media all and (max-width: 1200px) {
+
+    .funzionalità h2 {
+        font-size: 3rem;
+    }
+}
+
 /* Architettura generale*/
 .architettura {
     text-align: center;
@@ -138,6 +163,10 @@
     .hero h1 {
       font-size: 4rem;
       text-align: left;
+    }
+
+    .funzionalità h2 {
+        margin-bottom: 1.5rem;
     }
 
 }
