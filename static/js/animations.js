@@ -28,16 +28,22 @@ function initIntro() {
 }
 
 function initProblema() {
-    // Create a ScrollTrigger animation
-    gsap.to({
-        scrollTrigger: {
-            trigger: ".problema",
-            start: "top center", // When to start the animation
-            end: "bottom center", // When to end the animation
-            toggleClass: ["scrolled", ""], // Add "scrolled", remove ""
-            markers: true, // Display debug markers (for testing)
-        }
+
+    gsap.from(".problema", {
+      scrollTrigger: {
+          trigger: ".problema",
+          start: "50% center", 
+          end: "bottom center", 
+          toggleClass: {targets: ".problema", className: "scrolled"} // Add "scrolled"
+    }
     });
+
+    if (window.innerWidth < 768) {
+      gsap.getTweensOf(".problema").forEach(tween => {
+        // Update the start value for smaller screens
+        tween.scrollTrigger.vars.start = "bottom center";
+      });
+    }
 
 }
 
@@ -196,6 +202,6 @@ function initArchitettura() {
 
 window.onload = () => {
 	initIntro();
-    initProblema();
-    initArchitettura();
+  initProblema();
+  initArchitettura();
 };

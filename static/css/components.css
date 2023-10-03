@@ -18,22 +18,37 @@
 }
 
 /* Il problema -> la soluzione */
-.problema .grey,
-.problema .scrolled .green {
+
+
+
+.problema .row,
+.problema.scrolled .green  {
     border-radius: .7rem;
     background-color: var(--light);
+}
+
+.problema.scrolled .row {
+    background-color: var(--infofactory);
 }
 
 .problema h3 {
     text-transform: uppercase;
 }
 
-.problema .p-big .grey {
+.problema .p-big,
+.problema.scrolled .green .p-big {
     color: var(--secondary);
     font-weight: 600;
 }
 
-.problema .p-medium {
+
+.problema.scrolled .green h3,
+.problema.scrolled .green .p-medium {
+    color: var(--secondary);
+}
+
+.problema .p-medium,
+.problema.scrolled .p-medium {
     font-weight: 300;
 }
 
@@ -41,16 +56,17 @@
     font-weight: 600!important;
 }
 
-
-.problema .green,
-.problema .scrolled .grey{
+.problema .green {
     background-color: var(--infofactory);
     border-radius: .7rem;
 }
 
 .problema .green h3,
 .problema .green .p-big,
-.problema .green .p-medium {
+.problema .green .p-medium,
+.problema.scrolled h3,
+.problema.scrolled .p-big,
+.problema.scrolled .p-medium{
     color: var(--white);
 }
 
