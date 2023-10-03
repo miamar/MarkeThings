@@ -18,9 +18,6 @@
 }
 
 /* Il problema -> la soluzione */
-
-
-
 .problema .row,
 .problema.scrolled .green  {
     border-radius: .7rem;
@@ -95,6 +92,11 @@
     }
 }
 
+/* Case studies */
+.vw.case-studies {
+    background-color: var(--light);
+}
+
 /* Architettura generale*/
 .architettura {
     text-align: center;
@@ -140,7 +142,8 @@
 @media all and (max-width: 992px) {
 
     .hero h1, 
-    .hero .p-big{
+    .hero .p-big,
+    .case-studies .p-medium {
       width: 100%!important;
     }
 

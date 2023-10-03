@@ -11,6 +11,10 @@ body {
     min-height: 90vh;
 }
 
+.vw {
+    width: 100vw;
+}
+
 .padding {
     padding-top: 10rem;
     padding-bottom: 10rem;
