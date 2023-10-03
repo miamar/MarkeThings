@@ -56,6 +56,13 @@ h3 {
     line-height: 1.8rem;
 }
 
+.p-small {
+    color: var(--secondary);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+}
+
 .white {
     color: var(--white);
 }
