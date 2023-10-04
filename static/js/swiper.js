@@ -5,6 +5,6 @@ var swiper = new Swiper(".mySwiper", {
       clickable: true,
     },
     autoplay: {
-      delay: 500000
+      delay: 5000
       }
   });

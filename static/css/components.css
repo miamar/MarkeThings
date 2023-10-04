@@ -154,7 +154,7 @@
 }
 
 .swiper-slide .loghi {
-    display: inline-block;
+    display: flex;
     margin-bottom: 3rem;
 }
 
@@ -166,6 +166,7 @@
 
 .swiper-slide h2 {
     margin-bottom: 0;
+    text-transform: uppercase;
 }
 
 .swiper-slide h2 span {
@@ -191,11 +192,21 @@
     font-size: 1.25rem;  
     font-weight: 600;
     text-decoration: 0;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+}
+
+.swiper-slide a svg {
+    fill: var(--primary); 
+    margin-left: .5rem;
 }
 
 .swiper-slide a:hover {
     color: var(--infofactory); 
+}
+
+.swiper-slide a:hover svg {
+    fill: var(--infofactory); 
 }
 
 .swiper-pagination {
@@ -206,8 +217,8 @@
 
 .swiper-pagination-bullet {
     width: 2.5rem!important; 
-    height: 0.4rem!important;
-    border-radius: 0.5rem!important;
+    height: .4rem!important;
+    border-radius: .5rem!important;
     opacity: .1!important;
 }
 
