@@ -70,6 +70,8 @@
 /* Funzionalità techniche */
 .funzionalità .row {
     background-color: var(--light);
+    border-radius: .7rem;
+    border: 1px solid #E8E8E8;
 }
 
 .funzionalità .card {
