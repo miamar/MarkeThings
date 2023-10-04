@@ -6,10 +6,13 @@
     <link rel="icon" href="/static/img/svg/logo-icon.svg" type="image/svg">
     <title>MarkeThings landing page</title>
 
-    <!-- Bootstrap-->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    
+    <script defer src="https://unpkg.com/phosphor-icons"></script>
     <link href="/static/css/style.css" rel="stylesheet" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -19,7 +22,6 @@
 
     <script src="/static/js/header.js"></script>
     <script src="/static/js/animations.js"></script>
-    
 
   </head>
   <body>
@@ -67,7 +69,7 @@
           <div class="col-lg-6 p-5 left green">
             <h3>Il problema</h3>
             <p class="p-big">Le sfide della vendita di prodotti tecnologici tramite portali online e canali tradizionali</p>
-            <p class="p-medium mt-4">Quando un prodotto tecnologico viene venduto attraverso <b>portali online</b> o <b>canali tradizionali</b>, il produttore di solito non ha una relazione diretta con l'utente finale. La comunicazione avviene tramite <b>l'intermediario</b> che ha gestito la vendita.</p>
+            <p class="p-medium mt-4">Quando un prodotto tecnologico viene venduto attraverso <b>portali online</b> o <b>canali tradizionali</b>, il produttore di solito non ha una relazione diretta con l'utente finale. <br> La comunicazione avviene tramite <b>l'intermediario</b> che ha gestito la vendita.</p>
           </div>
           <div class="col-lg-6 p-5 right">
             <h3>La soluzione</h3>
@@ -174,7 +176,35 @@
       <div class="vw case-studies">
         <div class="container vh centered padding">
           <h2>Case studies</h2>
-          <p class="p-medium w-75 text-center">Lorem ipsum dolor sit amet consectetur. Faucibus ultrices posuere augue eget duis porttitor.</p>
+          <!--<p class="p-big w-50 text-center mt-2">Lorem ipsum dolor sit amet consectetur. Faucibus ultrices posuere augue eget duis porttitor.</p>-->
+          <div class="swiper mySwiper my-5">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <div class="row align-items-center">
+                  <div class="col-12 col-lg-7">
+                    <div class="loghi">
+                      <img src="/static/img/svg/checkup-logo.svg">
+                      <img src="/static/img/svg/checkup-logo.svg">
+                    </div>
+                    <h2>IT<span>AIR</span></h2>
+                    <h4>Ricerca, sviluppo e produzione dispositivi elettronici</h4>
+                    <p class="p-big mt-4">Progettazione, Design e sviluppo di <b>un’applicazione mobile</b> per il controllo via <b>Bluetooth</b> del sistema di purificazione dell’aria Itair.
+                      <br>La piattaforma online permette inoltre di gestire l’<b>attivazione della garanzia</b> degli utenti e la <b>raccolta dei dati anagrafici</b> e di contatto dei clienti.</p>
+                    <div class="mt-4"><a href="">Scopri di più <i class="ph-bold ph-caret-right"></i></a></div>
+                  </div>
+                  <div class="col-12 col-lg-5">
+                    <img src="/media/img/itair.png" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+              <div class="swiper-slide"></div>
+            </div>
+            <div class="swiper-pagination mt-4"></div>
+          </div>
 
         </div>
       </div>
@@ -190,7 +220,12 @@
 
     </footer>
 
-    <!-- Bootstrap-->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="/static/js/swiper.js"></script>
+
   </body>
 </html>

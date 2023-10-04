@@ -38,7 +38,6 @@
     font-weight: 600;
 }
 
-
 .problema.scrolled .green h3,
 .problema.scrolled .green .p-medium {
     color: var(--secondary);
@@ -94,11 +93,6 @@
     }
 }
 
-/* Case studies */
-.vw.case-studies {
-    background-color: var(--light);
-}
-
 /* Architettura generale*/
 .architettura {
     text-align: center;
@@ -139,6 +133,87 @@
 	width: 100%;
     height: 100%;
 	transition: opacity .3s ease-in;
+}
+
+/* Case studies */
+.vw.case-studies {
+    background-color: var(--light);
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    /*box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.05);*/
+}
+
+.swiper-slide {
+    background: #fff;
+    height: 100%;
+    border-radius: .7rem;
+    padding: 3rem;
+}
+
+.swiper-slide .loghi {
+    display: inline-block;
+    margin-bottom: 3rem;
+}
+
+.swiper-slide .loghi img {
+    min-height: 2rem;
+    max-height: 3rem;
+    margin-right: 1.5rem;
+}
+
+.swiper-slide h2 {
+    margin-bottom: 0;
+}
+
+.swiper-slide h2 span {
+    color: var(--primary);
+}
+
+.swiper-slide h4 {
+    font-weight: 500;
+    color: #3C4136;
+}
+
+.swiper-slide .p-big {
+    color: var(--grey);
+    font-weight: 300;
+}
+
+.swiper-slide .p-big b {
+    color: var(--secondary);   
+}
+
+.swiper-slide a {
+    color: var(--primary); 
+    font-size: 1.25rem;  
+    font-weight: 600;
+    text-decoration: 0;
+    display: inline-block;
+}
+
+.swiper-slide a:hover {
+    color: var(--infofactory); 
+}
+
+.swiper-pagination {
+    position: relative!important;
+    bottom: unset!important;
+    top: unset!important;
+}
+
+.swiper-pagination-bullet {
+    width: 2.5rem!important; 
+    height: 0.4rem!important;
+    border-radius: 0.5rem!important;
+    opacity: .1!important;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary)!important;
+    opacity: 1!important;
 }
 
 @media all and (max-width: 992px) {
