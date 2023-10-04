@@ -47,6 +47,26 @@ function initProblema() {
 
 }
 
+function initFunzionalita() {
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".funzionalità",
+      start: "top center",
+      toggleActions: "restart pause resume pause",
+      markers: true,
+    }
+  });
+
+  tl.from('.funzionalità h2', {
+    x: -40,
+    opacity: 0,
+    duration: 2,
+    ease: 'power4'
+})
+
+}
+
 function initArchitettura() {
 
       let tl = gsap.timeline({
@@ -203,5 +223,6 @@ function initArchitettura() {
 window.onload = () => {
 	initIntro();
   initProblema();
+  initFunzionalita();
   initArchitettura();
 };
