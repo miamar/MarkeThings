@@ -48,23 +48,36 @@ function initProblema() {
 }
 
 function initFunzionalita() {
+  const title = document.querySelector('.col-12 h2');
 
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".funzionalità",
-      start: "top center",
-      toggleActions: "restart pause resume pause",
-      markers: true,
-    }
-  });
-
-  tl.from('.funzionalità h2', {
-    x: -40,
+  gsap.from(title, {
+    y: 50,
     opacity: 0,
     duration: 2,
-    ease: 'power4'
-})
+    ease: 'power4',
+    scrollTrigger: {
+      trigger: title,
+      start: 'top bottom',
+      toggleActions: 'restart pause resume pause',
+    },
+  });
 
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach((card, index) => {
+    gsap.from(card, {
+      y: 50,
+      opacity: 0,
+      duration: 2,
+      ease: 'power4',
+      scrollTrigger: {
+        trigger: card,
+        start: 'top bottom',
+        toggleActions: 'restart pause resume pause',
+        delay: index * 0.5 + 4,
+      },
+    });
+  });
 }
 
 function initArchitettura() {

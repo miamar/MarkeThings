@@ -262,4 +262,13 @@
 
 }
 
+@media all and (max-width: 576px) {
+
+    .funzionalità .row {
+        border-radius: 0rem;
+        border: none;
+    }
+
+}
+
 
