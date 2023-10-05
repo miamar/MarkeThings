@@ -135,6 +135,21 @@
 	transition: opacity .3s ease-in;
 }
 
+.architettura .swiper.mySwiperMobile {
+    display: none;
+}
+
+.architettura .swiper.mySwiperMobile .swiper-slide {
+    padding: 0;
+}
+
+.architettura .swiper.mySwiperMobile img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 /* Case studies */
 .vw.case-studies {
     background-color: var(--light);
@@ -245,6 +260,14 @@
 
     .hero-img2 {
         display: block;
+    }
+
+    .architettura .swiper.mySwiperMobile {
+        display: block;
+    }
+
+    .architettura .slide-container {
+        display: none;
     }
 
 }

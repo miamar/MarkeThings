@@ -7,4 +7,11 @@ var swiper = new Swiper(".mySwiper", {
     autoplay: {
       delay: 5000
       }
-  });
+});
+
+var swiper = new Swiper(".mySwiperMobile", {
+  slidesPerView: 2,
+  spaceBetween: 0
+});
+
+  
