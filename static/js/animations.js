@@ -15,7 +15,7 @@ function initIntro() {
         ease: 'power4'
     }, 0.1)
     .from('.hero img', {
-        y: 40,
+        y: 200,
         opacity: 0,
         duration: 2,
         ease: 'power4'
@@ -80,19 +80,31 @@ function initFunzionalita() {
   });
 }
 
+
 function initArchitettura() {
 
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".architettura",
-          pin: true,
-          scrub: true,
-          start: "top top",
-          toggleActions: "restart pause resume pause"
-        }
-      });
-    
-      // Slides Scroll Animation
+        gsap.from('.architettura h2', {
+          y:150, 
+          opacity:0, 
+          ease:"back", 
+          duration:1,
+          scrollTrigger: {
+            trigger: '.architettura',
+            start: 'top center', 
+            toggleActions: 'restart pause resume pause'
+          }
+        });
+
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".architettura",
+            pin: true,
+            scrub: true,
+            start: "top top",
+            toggleActions: "restart pause resume pause"
+          }
+        });
+
       tl.from(
           "[data-slide='1'] ", {
             opacity: 0,
@@ -231,6 +243,23 @@ function initArchitettura() {
         ) 
 }
 
+function initCaseStudies() {
+
+  gsap.from('.case-studies h2:first-child', {
+    x: 40,
+    opacity: 0,
+    duration: 2,
+    ease: 'power4',
+    scrollTrigger: {
+      trigger: '.case-studies',
+      start: 'top center', // Adjust the start position as needed
+      toggleActions: 'restart pause resume pause'
+    }
+  });
+
+  
+
+}
 
 
 window.onload = () => {
@@ -238,4 +267,5 @@ window.onload = () => {
   initProblema();
   initFunzionalita();
   initArchitettura();
+  initCaseStudies();
 };

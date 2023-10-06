@@ -250,10 +250,6 @@
       width: 100%!important;
     }
 
-    .hero .p-big {
-      display: none;
-    }
-
     .hero-img {
         display: none;
     }
@@ -276,7 +272,11 @@
 
     .hero h1 {
       font-size: 4rem;
-      text-align: left;
+    }
+
+    .hero .p-big {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
     }
 
     .funzionalità h2 {
