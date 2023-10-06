@@ -48,7 +48,8 @@ function initProblema() {
 }
 
 function initFunzionalita() {
-  const title = document.querySelector('.col-12 h2');
+  
+  const title = document.querySelector('.funzionalità h2');
 
   gsap.from(title, {
     y: 50,
@@ -62,7 +63,7 @@ function initFunzionalita() {
     },
   });
 
-  const cards = document.querySelectorAll('.card');
+  const cards = document.querySelectorAll('.funzionalità .card');
 
   cards.forEach((card, index) => {
     gsap.from(card, {
@@ -245,19 +246,17 @@ function initArchitettura() {
 
 function initCaseStudies() {
 
-  gsap.from('.case-studies h2:first-child', {
-    x: 40,
+  gsap.from(['.case-studies h2:first-child', '.case-studies .mySwiper'], {
+    x: 50,
     opacity: 0,
     duration: 2,
     ease: 'power4',
     scrollTrigger: {
       trigger: '.case-studies',
-      start: 'top center', // Adjust the start position as needed
+      start: 'top center', 
       toggleActions: 'restart pause resume pause'
     }
   });
-
-  
 
 }
 
