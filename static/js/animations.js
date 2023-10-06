@@ -83,165 +83,50 @@ function initFunzionalita() {
 
 
 function initArchitettura() {
+  gsap.from('.architettura h2', {
+    y: 150, 
+    opacity: 0, 
+    ease: "back", 
+    duration: 1,
+    scrollTrigger: {
+      trigger: '.architettura',
+      start: 'top center', 
+      toggleActions: 'restart pause resume pause'
+    }
+  });
 
-        gsap.from('.architettura h2', {
-          y:150, 
-          opacity:0, 
-          ease:"back", 
-          duration:1,
-          scrollTrigger: {
-            trigger: '.architettura',
-            start: 'top center', 
-            toggleActions: 'restart pause resume pause'
-          }
-        });
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".architettura",
+      pin: true,
+      scrub: true,
+      start: "top top",
+      toggleActions: "restart pause resume pause"
+    }
+  });
 
-        let tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: ".architettura",
-            pin: true,
-            scrub: true,
-            start: "top top",
-            toggleActions: "restart pause resume pause"
-          }
-        });
+  const slideCount = 9; // Number of slides
+  const staggerDuration = 1; // Stagger duration between slides
 
-      tl.from(
-          "[data-slide='1'] ", {
-            opacity: 0,
-            duration: 0.5
-          },
-          "+=1"
-        )
-    
-        .to(
-          "[data-slide='1'] ", {
-            duration: 0.5,
-            ease: "power4"
-          },
-          "+=10"
-        )
-    
-        .from(
-          "[data-slide='2'] ", {
-            opacity: 0,
-            duration: 0.5,
-          },
-          "+=1"
-        )
-        
-        .to(
-          "[data-slide='2']", {
-            duration: 0.5,
-            ease: "power4"
-          },
-          "+=10"
-        )
-    
-        .from(
-            "[data-slide='3'] ", {
-              opacity: 0,
-              duration: 0.5,
-            },
-            "+=1"
-        )
-
-        .to(
-            "[data-slide='3']", {
-              duration: 0.5,
-              ease: "power4"
-            },
-            "+=10"
-        )
-
-        .from(
-            "[data-slide='4'] ", {
-              opacity: 0,
-              duration: 0.5,
-            },
-            "+=1"
-        )
-
-        .to(
-            "[data-slide='4']", {
-              duration: 0.5,
-              ease: "power4"
-            },
-            "+=10"
-        )
-
-        .from(
-            "[data-slide='5'] ", {
-              opacity: 0,
-              duration: 0.5,
-            },
-            "+=1"
-        )
-
-        .to(
-            "[data-slide='5']", {
-              duration: 0.5,
-              ease: "power4"
-            },
-            "+=10"
-        )
-
-        .from(
-            "[data-slide='6'] ", {
-              opacity: 0,
-              duration: 0.5,
-            },
-            "+=1"
-        )
-
-        .to(
-            "[data-slide='6']", {
-              duration: 0.5,
-              ease: "power4"
-            },
-            "+=10"
-        )
-
-        .from(
-            "[data-slide='7'] ", {
-              opacity: 0,
-              duration: 0.5,
-            },
-            "+=1"
-        )
-
-        .to(
-            "[data-slide='7']", {
-              duration: 0.5,
-              ease: "power4"
-            },
-            "+=10"
-        )
-
-        .from(
-            "[data-slide='8'] ", {
-              opacity: 0,
-              duration: 0.5,
-            },
-            "+=1"
-        )
-
-        .to(
-            "[data-slide='8']", {
-              duration: 0.5,
-              ease: "power4"
-            },
-            "+=10"
-        )
-
-        .from(
-            "[data-slide='9']", {
-              opacity: 0,
-              duration: 0.5,
-              stagger: 1
-            },
-            "+=1"
-        ) 
+  for (let i = 1; i <= slideCount; i++) {
+    tl.from(
+      `[data-slide='${i}']`, {
+        opacity: 0,
+        duration: 0.5,
+        stagger: {
+          each: staggerDuration,
+          from: "start"
+        }
+      },
+      `+=${i === slideCount ? 0 : 1}`
+    ).to(
+      `[data-slide='${i}']`, {
+        duration: 0.5,
+        ease: "power4"
+      },
+      `+=${staggerDuration}`
+    );
+  }
 }
 
 function initCaseStudies() {
