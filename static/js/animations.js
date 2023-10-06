@@ -48,7 +48,7 @@ function initProblema() {
 }
 
 function initFunzionalita() {
-  
+
   const title = document.querySelector('.funzionalità h2');
 
   gsap.from(title, {
@@ -247,7 +247,7 @@ function initArchitettura() {
 function initCaseStudies() {
 
   gsap.from(['.case-studies h2:first-child', '.case-studies .mySwiper'], {
-    x: 50,
+    x: 100,
     opacity: 0,
     duration: 2,
     ease: 'power4',
