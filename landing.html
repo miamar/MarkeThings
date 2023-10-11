@@ -21,6 +21,134 @@
 
     <script src="/static/js/animations.js"></script>
 
+    <style>
+    .esempi {
+	display: flex;
+	justify-content: center;
+	background-color: black;
+}
+
+.esempi .slide-container {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr;
+	margin-left: 0;
+	width: calc(90% - 2rem);
+}
+
+.esempi .slide-container .slide {
+	width: 100%;
+	margin-left: auto;
+	position: relative;
+	height: auto;
+	grid-row: 1;
+	grid-column: 1;
+	transition: opacity .5s ease-in-out;
+	-webkit-transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-ms-transition: opacity .5s ease-in-out;
+	-o-transition: opacity .5s ease-in-out;
+}
+
+.esempi .image {
+	margin: 5rem 0;
+	grid-row: 1 / span 2;
+	grid-column: 2 / span 2;
+	height: 0;
+	border-radius: 50%;
+}
+
+.esempi h4 {
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: white;
+	width: 70%;
+	padding: 15px 0px 0px 60px;
+	z-index: 1;
+}
+
+.esempi img {
+	width: 100%;
+	transition: opacity .3s ease-in;
+}
+
+.slick-dots {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-end;
+	flex-direction: column;
+	margin-right: 5%;
+	top: 0;
+	left: 0;
+	bottom: auto;
+	width: 10%;
+	height: 100%;
+	border: solid;
+	border-top: 0;
+	border-bottom: 0;
+	border-left: 0;
+	border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(226, 226, 226, 1) 48%, rgba(255, 255, 255, 0) 100%);
+	border-image-slice: 1;
+	padding-right: 1.6rem;
+}
+
+.slick-dots .slick-slide .slick-nav::after {
+	content: "";
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	position: absolute;
+	top: 32%;
+	right: -37px;
+	visibility: hidden;
+	transition: opacity 1s ease;
+}
+
+.slick-dots li {
+	list-style: none;
+	position: relative;
+	transition: opacity 600ms ease;
+}
+
+.slick-dots .slick-slide .slick-nav {
+	font-size: 2rem;
+	font-weight: 300;
+	line-height: 1.5;
+	letter-spacing: var(--small-letter-space);
+	color: #fff;
+	cursor: pointer;
+	text-transform: none;
+	text-decoration: none;
+	transition: all .75s ease-in-out;
+	-webkit-transition: all .75s ease-in-out;
+	-moz-transition: all .75s ease-in-out;
+	-ms-transition: all .75s ease-in-out;
+	-o-transition: all .75s ease-in-out;
+}
+
+.slick-dots .slick-slide[style="opacity: 1;"] {
+	font-size: 2.5rem;
+	transition: all .75s ease-in-out;
+	-webkit-transition: all .75s ease-in-out;
+	-moz-transition: all .75s ease-in-out;
+	-ms-transition: all .75s ease-in-out;
+	-o-transition: all .75s ease-in-out;
+}
+
+
+.slick-dots .slick-slide[style="opacity: 0;"] {
+	opacity: .25 !important;
+}
+
+li.slick-slide[style="opacity: 1;"] .slick-nav::after {
+	visibility: visible;
+}
+
+    </style>
+
   </head>
   <body>
   
@@ -49,6 +177,7 @@
     </header>
 
     <main>
+
       <div class="container hero">
 
           <h1 class="mt-5 w-75">Piattaforma <span>IoT</span> per il mercato consumer</h1>
@@ -56,7 +185,7 @@
           <img class="hero-img" src="/media/img/hero.png" style="width: 100vw;">
           <img class="hero-img2 mt-4 mt-sm-5" src="/media/img/hero2.png" style="width: 100vw;">
 
-        </div>
+      </div>
 
       <div class="container vh">
 
@@ -79,7 +208,7 @@
 
       </div>
 
-      <div class="container funzionalità centered vh">
+      <div class="container funzionalità centered padding">
 
         <div class="row p-5 p-sm-4 ">
           
@@ -124,6 +253,76 @@
 
         </div>
 
+      </div>
+
+      <div class="esempi vh padding px-5">
+     
+        <ul class="slick-dots" role="tablist" style="display: flex;">
+          <li class="slick-slide slide-1" role="presentation" data-slide="1">
+            <a href="#section1" class="slick-nav">2003</a>
+          </li>
+          <li class="slick-slide slide-2" role="presentation" data-slide="2">
+            <a href="#section2" class="slick-nav">2004</a>
+          </li>
+          <li class="slick-slide slide-3" role="presentation" data-slide="3">
+            <a href="#section3" class="slick-nav">2005</a>
+          </li>
+          <li class="slick-slide slide-4" role="presentation" data-slide="4">
+            <a href="#section4" class="slick-nav">2008</a>
+          </li>
+          <li class="slick-slide slide-5" role="presentation" data-slide="5">
+            <a href="#section5" class="slick-nav">2013</a>
+          </li>
+          <li class="slick-slide slide-6" role="presentation" data-slide="6">
+            <a href="#section6" class="slick-nav">2020</a>
+          </li>
+        </ul>
+    
+        <div class="slide-container">
+          <div id="section1" class="slide" data-slide="1">
+            <img class="timeline-banner desktop-img"
+              src="https://www.outfittersstores.com/wp-content/uploads/2020/12/outfitters-2003-timeline-banner.png"
+              alt="Outfitters 2003">
+            <h4>Outfitters is born with the vision to uplift the western fashion industry in Pakistan</h4>
+          </div>
+    
+          <div id="section2" class="slide" data-slide="2">
+            <img class="timeline-banner desktop-img"
+              src="https://www.outfittersstores.com/wp-content/uploads/2020/12/outfitters-2004-timeline-banner.png"
+              alt="Outfitters 2004 - multi-city brand">
+            <h4>Outfitters is a multi-city brand</h4>
+          </div>
+    
+          <div id="section3" class="slide" data-slide="3">
+            <img class="timeline-banner desktop-img"
+              src="https://www.outfittersstores.com/wp-content/uploads/2021/03/outfitters-2005-timeline-banner-v2.png"
+              alt="Outfitters 2005 - Womenswear">
+            <h4>The first collection for Outfitters Womenswear launches in stores</h4>
+          </div>
+    
+          <div id="section4" class="slide" data-slide="4">
+            <img class="timeline-banner desktop-img"
+              src="https://www.outfittersstores.com/wp-content/uploads/2020/12/outfitters-2008-timeline-banner.png"
+              alt="Outfitters 2008 - Outfitters">
+            <h4>Outfitters Juniors is introduced, a trendy fashion line for kids</h4>
+          </div>
+    
+          <div id="section5" class="slide" data-slide="5">
+            <img class="timeline-banner desktop-img"
+              src="https://www.outfittersstores.com/wp-content/uploads/2020/12/outfitters-2013-timeline-desktop.jpg"
+              alt="Outfitters 2013 - Ethnic">
+            <h4>Outfitters Stores becomes an umbrella company and launches the much awaited eastern wear brand, Ethnic, in
+              addition to Outfitters</h4>
+          </div>
+    
+          <div id="section6" class="slide" data-slide="6">
+            <img class="timeline-banner desktop-img"
+              src="https://www.outfittersstores.com/wp-content/uploads/2020/12/outfitters-2020-timeline-banner.png"
+              alt="Outfitters 2020 - Bespoke Studio">
+            <h4>Outfitters launches its largest flagship store in Lahore with Pakistan’s first Bespoke Studio</h4>
+          </div>
+        </div>
+     
       </div>
 
       <div class="container architettura centered padding">
@@ -181,96 +380,94 @@
 
       </div>
 
-      <div class="vw case-studies" id="case-studies">
-        <div class="container vh centered padding">
-          <h2>Case studies</h2>
-          <!--<p class="p-big w-50 text-center mt-2">Lorem ipsum dolor sit amet consectetur. Faucibus ultrices posuere augue eget duis porttitor.</p>-->
-          <div class="swiper mySwiper my-5">
-            <div class="swiper-wrapper">
+      <div class="case-studies vh centered padding px-5" id="case-studies">
 
-              <div class="swiper-slide">
-                <div class="row align-items-center">
-                  <div class="col-12 col-lg-7">
-                    <div class="loghi">
-                      <a href="https://check-up.it/" target="_blank"><img src="/static/img/svg/checkup-logo.svg"></a>
-                    </div>
-                    <h2>IT<span>AIR</span></h2>
-                    <h4>Ricerca, sviluppo e produzione dispositivi elettronici</h4>
-                    <p class="p-big mt-4">Progettazione, Design e sviluppo di <b>un’applicazione mobile</b> per il controllo via <b>Bluetooth</b> del sistema di purificazione dell’aria Itair.
-                      <br>La piattaforma online permette inoltre di gestire l’<b>attivazione della garanzia</b> degli utenti e la <b>raccolta dei dati anagrafici</b> e di contatto dei clienti.</p>
-                    <div class="mt-4 mb-4 mb-lg-0">
-                      <a href="https://infofactory.it/en/portfolio/itair-un-purificatore-daria-smart-che-utilizza-le-piante-e-la-fitodepurazione/" target="_blank">Scopri di più <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" style="fill: var(--primary)"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></a>
-                    </div>
+        <h2>Case studies</h2>
+        <!--<p class="p-big w-50 text-center mt-2">Lorem ipsum dolor sit amet consectetur. Faucibus ultrices posuere augue eget duis porttitor.</p>-->
+        <div class="swiper mySwiper my-5">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="row align-items-center">
+                <div class="col-12 col-lg-7">
+                  <div class="loghi">
+                    <a href="https://check-up.it/" target="_blank"><img src="/static/img/svg/checkup-logo.svg"></a>
                   </div>
-                  <div class="col-12 col-lg-5">
-                    <img src="/media/img/itair.png" class="img-fluid">
+                  <h2>IT<span>AIR</span></h2>
+                  <h4>Ricerca, sviluppo e produzione dispositivi elettronici</h4>
+                  <p class="p-big mt-4">Progettazione, Design e sviluppo di <b>un’applicazione mobile</b> per il controllo via <b>Bluetooth</b> del sistema di purificazione dell’aria Itair.
+                    <br>La piattaforma online permette inoltre di gestire l’<b>attivazione della garanzia</b> degli utenti e la <b>raccolta dei dati anagrafici</b> e di contatto dei clienti.</p>
+                  <div class="mt-4 mb-4 mb-lg-0">
+                    <a href="https://infofactory.it/en/portfolio/itair-un-purificatore-daria-smart-che-utilizza-le-piante-e-la-fitodepurazione/" target="_blank">Scopri di più <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" style="fill: var(--primary)"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></a>
                   </div>
                 </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="row align-items-center">
-                  <div class="col-12 col-lg-7">
-                    <div class="loghi">
-                      <a href="https://check-up.it/" target="_blank"><img src="/static/img/svg/checkup-logo.svg"></a>
-                    </div>
-                    <h2>IT<span>AUDIO</span></h2>
-                    <h4>Ricerca, sviluppo e produzione dispositivi elettronici</h4>
-                    <p class="p-big mt-4">Progettazione, Design e sviluppo di <b>un’applicazione mobile</b> per il controllo via Bluetooth del sistema Itaudio composto da illuminazione ed impianto di diffusione integrato. 
-                      <br>La piattaforma online permette inoltre di gestire <b>l’attivazione della garanzia</b> degli utenti e la <b>raccolta dei dati anagrafici</b> e di contatto dei clienti. </p>
-                  </div>
-                  <div class="col-12 col-lg-5">
-                    <img src="/media/img/itaudio.png" class="img-fluid">
-                  </div>
+                <div class="col-12 col-lg-5">
+                  <img src="/media/img/itair.png" class="img-fluid">
                 </div>
               </div>
-
-              <div class="swiper-slide">
-                <div class="row align-items-center">
-                  <div class="col-12 col-lg-7">
-                    <div class="loghi">
-                      <a href="https://check-up.it/" target="_blank"><img src="/static/img/svg/checkup-logo.svg"></a>
-                      <a href="" target="_blank"><img src="/static/img/svg/sixtus-logo.svg"></a>
-                    </div>
-                    <h2>Tecnosix <span>Mag</span></h2>
-                    <h4>Prodotti per la salute ed il benessere disico</h4>
-                    <p class="p-big mt-4">Sviluppo di <b>un’applicazione mobile</b> per il controllo via Bluetooth del sistema per la <b>magnetoterapia</b> di Sixtus Italia quella permette di eseguire cicli terapeutici predefiniti o di crearne di nuovi e personalizzati. 
-                      <br> L'app gestisce fino a 5 utenti diversi ciascuno con le proprie personalizzazioni e lo storico dei cicli terapeutici eseguiti.</p>
-                  </div>
-                  <div class="col-12 col-lg-5">
-                    <img src="/media/img/tecnosix-mag.png" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="row align-items-center">
-                  <div class="col-12 col-lg-7">
-                    <div class="loghi">
-                      <a href="https://check-up.it/" target="_blank"><img src="/static/img/svg/checkup-logo.svg"></a>
-                    </div>
-                    <h2>Air<span>Cub</span></h2>
-                    <h4>Organizzatori, ionizzatori e profumatopri d'aria</h4>
-                    <p class="p-big mt-4">Progettazione, Design e sviluppo di <b>un’applicazione mobile</b> per il controllo via <b>Bluetooth</b> del sistema di profumazione e ozonizzazione dell’aria Aircub che dispone di un <b>e-commerce</b> integrato per l’acquisto dei <b>consumabili</b>.</p>
-                  </div>
-                  <div class="col-12 col-lg-5">
-                    <img src="/media/img/aircub.png" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-
             </div>
-            <div class="swiper-pagination mt-4"></div>
-          </div>
 
+            <div class="swiper-slide">
+              <div class="row align-items-center">
+                <div class="col-12 col-lg-7">
+                  <div class="loghi">
+                    <a href="https://check-up.it/" target="_blank"><img src="/static/img/svg/checkup-logo.svg"></a>
+                  </div>
+                  <h2>IT<span>AUDIO</span></h2>
+                  <h4>Ricerca, sviluppo e produzione dispositivi elettronici</h4>
+                  <p class="p-big mt-4">Progettazione, Design e sviluppo di <b>un’applicazione mobile</b> per il controllo via Bluetooth del sistema Itaudio composto da illuminazione ed impianto di diffusione integrato. 
+                    <br>La piattaforma online permette inoltre di gestire <b>l’attivazione della garanzia</b> degli utenti e la <b>raccolta dei dati anagrafici</b> e di contatto dei clienti. </p>
+                </div>
+                <div class="col-12 col-lg-5">
+                  <img src="/media/img/itaudio.png" class="img-fluid">
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="row align-items-center">
+                <div class="col-12 col-lg-7">
+                  <div class="loghi">
+                    <a href="https://check-up.it/" target="_blank"><img src="/static/img/svg/checkup-logo.svg"></a>
+                    <a href="" target="_blank"><img src="/static/img/svg/sixtus-logo.svg"></a>
+                  </div>
+                  <h2>Tecnosix <span>Mag</span></h2>
+                  <h4>Prodotti per la salute ed il benessere disico</h4>
+                  <p class="p-big mt-4">Sviluppo di <b>un’applicazione mobile</b> per il controllo via Bluetooth del sistema per la <b>magnetoterapia</b> di Sixtus Italia quella permette di eseguire cicli terapeutici predefiniti o di crearne di nuovi e personalizzati. 
+                    <br> L'app gestisce fino a 5 utenti diversi ciascuno con le proprie personalizzazioni e lo storico dei cicli terapeutici eseguiti.</p>
+                </div>
+                <div class="col-12 col-lg-5">
+                  <img src="/media/img/tecnosix-mag.png" class="img-fluid">
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="row align-items-center">
+                <div class="col-12 col-lg-7">
+                  <div class="loghi">
+                    <a href="https://check-up.it/" target="_blank"><img src="/static/img/svg/checkup-logo.svg"></a>
+                  </div>
+                  <h2>Air<span>Cub</span></h2>
+                  <h4>Organizzatori, ionizzatori e profumatopri d'aria</h4>
+                  <p class="p-big mt-4">Progettazione, Design e sviluppo di <b>un’applicazione mobile</b> per il controllo via <b>Bluetooth</b> del sistema di profumazione e ozonizzazione dell’aria Aircub che dispone di un <b>e-commerce</b> integrato per l’acquisto dei <b>consumabili</b>.</p>
+                </div>
+                <div class="col-12 col-lg-5">
+                  <img src="/media/img/aircub.png" class="img-fluid">
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination mt-4"></div>
         </div>
+
       </div>
 
       <div class="container vh" style="background-color: gainsboro;">
 
       </div>
 
-      
     </main>
 
     <footer>

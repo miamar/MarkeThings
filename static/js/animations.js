@@ -81,8 +81,146 @@ function initFunzionalita() {
   });
 }
 
+function initEsempi() {
+
+  gsap.utils.toArray(".slick-nav").forEach((a, i) => {
+    a.clickElem = document.querySelector(a.hash);
+    a.offset = a.clickElem.offsetTop;
+    a.height = a.clickElem.offsetHeight;
+    a.addEventListener("click", e => {
+      e.preventDefault();
+      gsap.to(window, {scrollTo: a.offset + a.height * (i + 1)})
+    });
+  });
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".esempi",
+      duration: 1.5,
+      pin: true,
+      scrub: true,
+      start: "top top",
+      end: "+=3000",
+      toggleActions: "restart pause resume pause"
+    }
+  });
+
+
+  // Slides Scroll Animation
+  tl.from(
+      ".esempi [data-slide='1'] ", {
+        opacity: 0.5,
+        duration: 1,
+        stagger: 2
+      },
+      "+=1"
+    )
+
+    .to(
+      ".esempi [data-slide='1'] ", {
+        opacity: 0,
+        duration: 1,
+        stagger: 2,
+        ease: "power4"
+      },
+      "+=10"
+    )
+
+    .from(
+      ".esempi [data-slide='2'] ", {
+        opacity: 0,
+        duration: 1,
+        stagger: 2
+      },
+      "+=1"
+    )
+    .to(
+      ".esempi [data-slide='2']", {
+        opacity: 0,
+        duration: 1,
+        stagger: 2,
+        ease: "power4"
+      },
+      "+=10"
+    )
+
+    .from(
+      ".esempi [data-slide='3']", {
+        opacity: 0,
+        duration: 1,
+        stagger: 2
+      },
+      "+=1"
+    )
+    .to(
+      ".esempi [data-slide='3']", {
+        opacity: 0,
+        duration: 1,
+        stagger: 2,
+        ease: "power4"
+      },
+      "+=10"
+    )
+
+    .from(
+      ".esempi [data-slide='4']", {
+        opacity: 0,
+        duration: 1,
+        stagger: 2
+      },
+      "+=1"
+    )
+    .to(
+      ".esempi [data-slide='4'] ", {
+        opacity: 0,
+        duration: 1,
+        stagger: 2,
+        ease: "power4"
+      },
+      "+=10"
+    )
+
+    .from(
+      ".esempi [data-slide='5']", {
+        opacity: 0,
+        duration: 1,
+        stagger: 2
+      },
+      "+=1"
+    )
+    .to(
+      ".esempi [data-slide='5']", {
+        opacity: 0,
+        duration: 1,
+        stagger: 2,
+        ease: "power4"
+      },
+      "+=10"
+    )
+
+    .from(
+      ".esempi [data-slide='6']", {
+        opacity: 0,
+        duration: 1,
+        stagger: 2
+      },
+      "+=1"
+    )
+    .to(
+      ".esempi [data-slide='6']", {
+        opacity: 0.5,
+        duration: 1,
+        stagger: 2,
+        ease: "power4"
+      },
+      "+=10"
+    )
+
+}
+
 
 function initArchitettura() {
+
   gsap.from('.architettura h2', {
     y: 150, 
     opacity: 0, 
@@ -110,7 +248,7 @@ function initArchitettura() {
 
   for (let i = 1; i <= slideCount; i++) {
     tl.from(
-      `[data-slide='${i}']`, {
+      `.architettura [data-slide='${i}']`, {
         opacity: 0,
         duration: 0.5,
         stagger: {
@@ -120,13 +258,14 @@ function initArchitettura() {
       },
       `+=${i === slideCount ? 0 : 1}`
     ).to(
-      `[data-slide='${i}']`, {
+      `.architettura [data-slide='${i}']`, {
         duration: 0.5,
         ease: "power4"
       },
       `+=${staggerDuration}`
     );
   }
+
 }
 
 function initCaseStudies() {
@@ -150,6 +289,7 @@ window.onload = () => {
 	initIntro();
   initProblema();
   initFunzionalita();
+  initEsempi();
   initArchitettura();
   initCaseStudies();
 };
