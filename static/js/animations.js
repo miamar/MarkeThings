@@ -180,44 +180,7 @@ function initEsempi() {
       "+=10"
     )
 
-    .from(
-      ".esempi [data-slide='5']", {
-        opacity: 0,
-        duration: 1,
-        stagger: 2
-      },
-      "+=1"
-    )
-    .to(
-      ".esempi [data-slide='5']", {
-        opacity: 0,
-        duration: 1,
-        stagger: 2,
-        ease: "power4"
-      },
-      "+=10"
-    )
-
-    .from(
-      ".esempi [data-slide='6']", {
-        opacity: 0,
-        duration: 1,
-        stagger: 2
-      },
-      "+=1"
-    )
-    .to(
-      ".esempi [data-slide='6']", {
-        opacity: 0.5,
-        duration: 1,
-        stagger: 2,
-        ease: "power4"
-      },
-      "+=10"
-    )
-
 }
-
 
 function initArchitettura() {
 

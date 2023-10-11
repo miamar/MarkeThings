@@ -21,134 +21,6 @@
 
     <script src="/static/js/animations.js"></script>
 
-    <style>
-    .esempi {
-	display: flex;
-	justify-content: center;
-	background-color: black;
-}
-
-.esempi .slide-container {
-	display: grid;
-	grid-template-rows: 1fr;
-	grid-template-columns: 1fr;
-	margin-left: 0;
-	width: calc(90% - 2rem);
-}
-
-.esempi .slide-container .slide {
-	width: 100%;
-	margin-left: auto;
-	position: relative;
-	height: auto;
-	grid-row: 1;
-	grid-column: 1;
-	transition: opacity .5s ease-in-out;
-	-webkit-transition: opacity .5s ease-in-out;
-	-moz-transition: opacity .5s ease-in-out;
-	-ms-transition: opacity .5s ease-in-out;
-	-o-transition: opacity .5s ease-in-out;
-}
-
-.esempi .image {
-	margin: 5rem 0;
-	grid-row: 1 / span 2;
-	grid-column: 2 / span 2;
-	height: 0;
-	border-radius: 50%;
-}
-
-.esempi h4 {
-	font-family: "Open Sans", sans-serif;
-	font-size: 1.5rem;
-	font-weight: 400;
-	line-height: 1.5;
-	color: white;
-	width: 70%;
-	padding: 15px 0px 0px 60px;
-	z-index: 1;
-}
-
-.esempi img {
-	width: 100%;
-	transition: opacity .3s ease-in;
-}
-
-.slick-dots {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: flex-end;
-	flex-direction: column;
-	margin-right: 5%;
-	top: 0;
-	left: 0;
-	bottom: auto;
-	width: 10%;
-	height: 100%;
-	border: solid;
-	border-top: 0;
-	border-bottom: 0;
-	border-left: 0;
-	border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(226, 226, 226, 1) 48%, rgba(255, 255, 255, 0) 100%);
-	border-image-slice: 1;
-	padding-right: 1.6rem;
-}
-
-.slick-dots .slick-slide .slick-nav::after {
-	content: "";
-	display: block;
-	width: 20px;
-	height: 20px;
-	background-color: #fff;
-	position: absolute;
-	top: 32%;
-	right: -37px;
-	visibility: hidden;
-	transition: opacity 1s ease;
-}
-
-.slick-dots li {
-	list-style: none;
-	position: relative;
-	transition: opacity 600ms ease;
-}
-
-.slick-dots .slick-slide .slick-nav {
-	font-size: 2rem;
-	font-weight: 300;
-	line-height: 1.5;
-	letter-spacing: var(--small-letter-space);
-	color: #fff;
-	cursor: pointer;
-	text-transform: none;
-	text-decoration: none;
-	transition: all .75s ease-in-out;
-	-webkit-transition: all .75s ease-in-out;
-	-moz-transition: all .75s ease-in-out;
-	-ms-transition: all .75s ease-in-out;
-	-o-transition: all .75s ease-in-out;
-}
-
-.slick-dots .slick-slide[style="opacity: 1;"] {
-	font-size: 2.5rem;
-	transition: all .75s ease-in-out;
-	-webkit-transition: all .75s ease-in-out;
-	-moz-transition: all .75s ease-in-out;
-	-ms-transition: all .75s ease-in-out;
-	-o-transition: all .75s ease-in-out;
-}
-
-
-.slick-dots .slick-slide[style="opacity: 0;"] {
-	opacity: .25 !important;
-}
-
-li.slick-slide[style="opacity: 1;"] .slick-nav::after {
-	visibility: visible;
-}
-
-    </style>
-
   </head>
   <body>
   
@@ -173,7 +45,6 @@ li.slick-slide[style="opacity: 1;"] .slick-nav::after {
         </div>
       </nav>
       
-
     </header>
 
     <main>
@@ -256,73 +127,99 @@ li.slick-slide[style="opacity: 1;"] .slick-nav::after {
       </div>
 
       <div class="esempi vh padding px-5">
-     
-        <ul class="slick-dots" role="tablist" style="display: flex;">
-          <li class="slick-slide slide-1" role="presentation" data-slide="1">
-            <a href="#section1" class="slick-nav">2003</a>
-          </li>
-          <li class="slick-slide slide-2" role="presentation" data-slide="2">
-            <a href="#section2" class="slick-nav">2004</a>
-          </li>
-          <li class="slick-slide slide-3" role="presentation" data-slide="3">
-            <a href="#section3" class="slick-nav">2005</a>
-          </li>
-          <li class="slick-slide slide-4" role="presentation" data-slide="4">
-            <a href="#section4" class="slick-nav">2008</a>
-          </li>
-          <li class="slick-slide slide-5" role="presentation" data-slide="5">
-            <a href="#section5" class="slick-nav">2013</a>
-          </li>
-          <li class="slick-slide slide-6" role="presentation" data-slide="6">
-            <a href="#section6" class="slick-nav">2020</a>
-          </li>
-        </ul>
-    
-        <div class="slide-container">
-          <div id="section1" class="slide" data-slide="1">
-            <img class="timeline-banner desktop-img"
-              src="https://www.outfittersstores.com/wp-content/uploads/2020/12/outfitters-2003-timeline-banner.png"
-              alt="Outfitters 2003">
-            <h4>Outfitters is born with the vision to uplift the western fashion industry in Pakistan</h4>
+
+        <h2 class="mb-5">Esempi</h2>
+
+        <div class="row">
+          <div class="col-6">
+            <ul class="slick-dots" role="tablist" style="display: flex;">
+
+              <li class="slick-slide slide-1 my-2" role="presentation" data-slide="1">
+                <a href="#section1" class="slick-nav">
+                  <div class="drop">
+                    <svg width="50" height="50" viewBox="0 0 41 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3.12561 44.5907C2.45104 44.7914 1.91687 44.9524 1.54659 45.0646C1.52879 44.8164 1.50744 44.4968 1.48498 44.1131C1.42608 43.1072 1.35958 41.6606 1.32943 39.902C1.26911 36.3834 1.3545 31.6227 1.93561 26.6454C2.51722 21.664 3.59268 16.4904 5.50003 12.1337C7.40836 7.77474 10.1248 4.28744 13.9585 2.58269C24.3529 -2.03944 35.472 2.97253 39.2227 11.4073C41.0841 15.5932 40.8253 21.6665 38.5442 27.0702C36.2677 32.4627 32.0228 37.0829 26.0292 38.4693C19.8251 39.9044 13.5553 41.5988 8.83822 42.9338C6.47925 43.6015 4.50768 44.1795 3.12561 44.5907Z" fill="white" stroke="#232323"/>
+                    </svg>
+                    <p class="p-medium">1</p>
+                  </div>
+                  <div class="d-flex flex-column">
+                    <h4>Gestione notifiche push</h4>
+                    <p class="p-medium">Gli utenti possono essere filtrati e selezionati da un unico backoffice in modo da creare gruppi distinti ed inviare notifiche personalizzate.</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="slick-slide slide-2 my-2" role="presentation" data-slide="2">
+                <a href="#section2" class="slick-nav">
+                  <div class="drop">
+                    <svg width="50" height="50" viewBox="0 0 41 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3.12561 44.5907C2.45104 44.7914 1.91687 44.9524 1.54659 45.0646C1.52879 44.8164 1.50744 44.4968 1.48498 44.1131C1.42608 43.1072 1.35958 41.6606 1.32943 39.902C1.26911 36.3834 1.3545 31.6227 1.93561 26.6454C2.51722 21.664 3.59268 16.4904 5.50003 12.1337C7.40836 7.77474 10.1248 4.28744 13.9585 2.58269C24.3529 -2.03944 35.472 2.97253 39.2227 11.4073C41.0841 15.5932 40.8253 21.6665 38.5442 27.0702C36.2677 32.4627 32.0228 37.0829 26.0292 38.4693C19.8251 39.9044 13.5553 41.5988 8.83822 42.9338C6.47925 43.6015 4.50768 44.1795 3.12561 44.5907Z" fill="white" stroke="#232323"/>
+                    </svg>
+                    <p class="p-medium">2</p>
+                  </div>
+                  <div class="d-flex flex-column">
+                    <h4>Gestione dei distributori</h4>
+                    <p class="p-medium">I distributori possono rimarchiare i prodotti.
+                      <br>La piattaforma permette di gestire l’associazione tra i prodotti ed i distributori mostrando eventualmente all’utente loghi o altre funzioni personalizzate per il singolo distributore.</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="slick-slide slide-3 my-2" role="presentation" data-slide="3">
+                <a href="#section3" class="slick-nav">
+                  <div class="drop">
+                    <svg width="50" height="50" viewBox="0 0 41 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3.12561 44.5907C2.45104 44.7914 1.91687 44.9524 1.54659 45.0646C1.52879 44.8164 1.50744 44.4968 1.48498 44.1131C1.42608 43.1072 1.35958 41.6606 1.32943 39.902C1.26911 36.3834 1.3545 31.6227 1.93561 26.6454C2.51722 21.664 3.59268 16.4904 5.50003 12.1337C7.40836 7.77474 10.1248 4.28744 13.9585 2.58269C24.3529 -2.03944 35.472 2.97253 39.2227 11.4073C41.0841 15.5932 40.8253 21.6665 38.5442 27.0702C36.2677 32.4627 32.0228 37.0829 26.0292 38.4693C19.8251 39.9044 13.5553 41.5988 8.83822 42.9338C6.47925 43.6015 4.50768 44.1795 3.12561 44.5907Z" fill="white" stroke="#232323"/>
+                    </svg>
+                    <p class="p-medium">3</p>
+                  </div>
+                  <div class="d-flex flex-column">
+                    <h4>Gestione lotti e garanze</h4>
+                    <p class="p-medium">Attivazione della garanzia. L’utente si collega alla App che legge il SN del dispositivo, controlla in cloud se il SN è valido e non è già registrato. 
+                      <br>Lotti e distributori. Il sistema gestisce sia i lotti dei prodotti (intervalli di SN) che i distributori dei prodotti con loghi specifici.</p>
+                  </div>
+                  </a>
+              </li>
+
+              <li class="slick-slide slide-4 my-2" role="presentation" data-slide="4">
+                <a href="#section4" class="slick-nav">
+                  <div class="drop">
+                    <svg width="50" height="50" viewBox="0 0 41 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3.12561 44.5907C2.45104 44.7914 1.91687 44.9524 1.54659 45.0646C1.52879 44.8164 1.50744 44.4968 1.48498 44.1131C1.42608 43.1072 1.35958 41.6606 1.32943 39.902C1.26911 36.3834 1.3545 31.6227 1.93561 26.6454C2.51722 21.664 3.59268 16.4904 5.50003 12.1337C7.40836 7.77474 10.1248 4.28744 13.9585 2.58269C24.3529 -2.03944 35.472 2.97253 39.2227 11.4073C41.0841 15.5932 40.8253 21.6665 38.5442 27.0702C36.2677 32.4627 32.0228 37.0829 26.0292 38.4693C19.8251 39.9044 13.5553 41.5988 8.83822 42.9338C6.47925 43.6015 4.50768 44.1795 3.12561 44.5907Z" fill="white" stroke="#232323"/>
+                    </svg>
+                    <p class="p-medium">4</p>
+                  </div>
+                  <div class="d-flex flex-column">
+                    <h4>Monitoraggio utilizzo funzioni del dispositivo</h4>
+                  <p class="p-medium">Viene monitorato l’utilizzo delle funzioni di un certo dispositivo in modo da capire che cosa viene più o meno utilizzato per ciascun tipo di dispositivo sul mercato.</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
           </div>
-    
-          <div id="section2" class="slide" data-slide="2">
-            <img class="timeline-banner desktop-img"
-              src="https://www.outfittersstores.com/wp-content/uploads/2020/12/outfitters-2004-timeline-banner.png"
-              alt="Outfitters 2004 - multi-city brand">
-            <h4>Outfitters is a multi-city brand</h4>
-          </div>
-    
-          <div id="section3" class="slide" data-slide="3">
-            <img class="timeline-banner desktop-img"
-              src="https://www.outfittersstores.com/wp-content/uploads/2021/03/outfitters-2005-timeline-banner-v2.png"
-              alt="Outfitters 2005 - Womenswear">
-            <h4>The first collection for Outfitters Womenswear launches in stores</h4>
-          </div>
-    
-          <div id="section4" class="slide" data-slide="4">
-            <img class="timeline-banner desktop-img"
-              src="https://www.outfittersstores.com/wp-content/uploads/2020/12/outfitters-2008-timeline-banner.png"
-              alt="Outfitters 2008 - Outfitters">
-            <h4>Outfitters Juniors is introduced, a trendy fashion line for kids</h4>
-          </div>
-    
-          <div id="section5" class="slide" data-slide="5">
-            <img class="timeline-banner desktop-img"
-              src="https://www.outfittersstores.com/wp-content/uploads/2020/12/outfitters-2013-timeline-desktop.jpg"
-              alt="Outfitters 2013 - Ethnic">
-            <h4>Outfitters Stores becomes an umbrella company and launches the much awaited eastern wear brand, Ethnic, in
-              addition to Outfitters</h4>
-          </div>
-    
-          <div id="section6" class="slide" data-slide="6">
-            <img class="timeline-banner desktop-img"
-              src="https://www.outfittersstores.com/wp-content/uploads/2020/12/outfitters-2020-timeline-banner.png"
-              alt="Outfitters 2020 - Bespoke Studio">
-            <h4>Outfitters launches its largest flagship store in Lahore with Pakistan’s first Bespoke Studio</h4>
+
+          <div class="col-6">
+            <div class="slide-container">
+              <div id="section1" class="slide" data-slide="1">
+                <img class="timeline-banner desktop-img" src="/media/img/esempi-test.png">
+              </div>
+        
+              <div id="section2" class="slide" data-slide="2">
+                <img class="timeline-banner desktop-img" src="/media/img/esempi2-test.png">
+              </div>
+        
+              <div id="section3" class="slide" data-slide="3">
+                <img class="timeline-banner desktop-img" src="/media/img/esempi3-test.png">
+              </div>
+        
+              <div id="section4" class="slide" data-slide="4">
+                <img class="timeline-banner desktop-img" src="/media/img/esempi4-test.png">
+              </div>
+
+            </div>
           </div>
         </div>
-     
+
       </div>
 
       <div class="container architettura centered padding">

@@ -93,6 +93,137 @@
     }
 }
 
+/* Esempi */
+.esempi {
+	display: flex;
+    flex-direction: column;
+	justify-content: center;
+	background-color: var(--black);
+    color:var(--white);
+}
+
+.esempi .col-6 {
+    display: flex;
+}
+.esempi h2 {
+    color: var(--white);
+}
+
+.esempi .slide-container {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr;
+	margin-left: 0;
+    align-items: center;
+}
+
+.esempi .slide-container .slide {
+	grid-row: 1;
+	grid-column: 1;
+	transition: opacity .5s ease-in-out;
+	-webkit-transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-ms-transition: opacity .5s ease-in-out;
+	-o-transition: opacity .5s ease-in-out;
+}
+
+.esempi img {
+	display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+	transition: opacity .3s ease-in;
+}
+
+.esempi h4 {
+    color: var(--light);
+    letter-spacing: .03rem;
+}
+
+.esempi p {
+    color: #BCBCBC;;
+}
+
+.slick-dots {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	flex-direction: column;
+    padding-left: 0;
+    width: 100%;
+}
+
+.slick-dots li {
+	list-style: none;
+    width: 100%;
+}
+
+.slick-nav {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    margin-right: 3rem;
+    background-color: #232323;
+    border-radius: 0.75rem;
+    cursor: pointer;
+	text-transform: none;
+	text-decoration: none;
+	transition: all .75s ease-in-out;
+	-webkit-transition: all .75s ease-in-out;
+	-moz-transition: all .75s ease-in-out;
+	-ms-transition: all .75s ease-in-out;
+	-o-transition: all .75s ease-in-out;
+}
+
+.slick-nav .drop {
+    position: relative;
+    margin-right: 1rem;
+}
+
+.drop .p-medium {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #232323;
+}
+
+.slick-dots .slick-slide[style="opacity: 1;"] {
+	transition: all .75s ease-in-out;
+	-webkit-transition: all .75s ease-in-out;
+	-moz-transition: all .75s ease-in-out;
+	-ms-transition: all .75s ease-in-out;
+	-o-transition: all .75s ease-in-out;
+}
+
+.slick-dots .slick-slide[style="opacity: 0;"] {
+	opacity: .25 !important;
+}
+
+.slick-dots .slick-slide[style="opacity: 0;"] h4 {
+	font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.slick-dots .slick-slide[style="opacity: 0;"] p {
+	display: none;
+}
+
+.slick-dots .slick-slide[style="opacity: 0;"] .slick-nav {
+    background-color: transparent;
+    border: 1px solid var(--white);
+}
+
+.slick-dots .slick-slide[style="opacity: 0;"] svg path{
+    fill: none;
+    stroke: var(--white);
+}
+
+.slick-dots .slick-slide[style="opacity: 0;"] .drop .p-medium {
+    color: var(--white);
+    display: block;
+}
+
 /* Architettura generale*/
 .architettura {
     text-align: center;
