@@ -83,16 +83,94 @@ function initFunzionalita() {
 
 function initEsempi() {
 
-  gsap.utils.toArray(".slick-nav").forEach((a, i) => {
-    a.clickElem = document.querySelector(a.hash);
-    a.offset = a.clickElem.offsetTop;
-    a.height = a.clickElem.offsetHeight;
-    a.addEventListener("click", e => {
-      e.preventDefault();
-      gsap.to(window, {scrollTo: a.offset + a.height * (i + 1)})
+  let tl = gsap.timeline({delay: 0.5});
+     
+    tl.from('.hero h1', {
+        y: -40,
+        opacity: 0,
+        duration: 2,
+        ease: 'power4'
+    })
+    .from('.hero .p-big', {
+        y: -20,
+        opacity: 0,
+        duration: 2,
+        ease: 'power4'
+    }, 0.1)
+    .from('.hero img', {
+        y: 200,
+        opacity: 0,
+        duration: 2,
+        ease: 'power4'
+    }, 0.1)
+    .to('.hero span', {
+        color: '#A2CA66',
+        duration: 0.5,
+    }, 1)
+
+}
+
+function initProblema() {
+
+    gsap.from(".problema", {
+      scrollTrigger: {
+          trigger: ".problema",
+          start: "50% center", 
+          end: "bottom center", 
+          toggleClass: {targets: ".problema", className: "scrolled"} // Add "scrolled"
+    }
     });
+
+    if (window.innerWidth < 768) {
+      gsap.getTweensOf(".problema").forEach(tween => {
+        // Update the start value for smaller screens
+        tween.scrollTrigger.vars.start = "bottom center";
+      });
+    }
+
+}
+
+function initFunzionalita() {
+
+  const title = document.querySelector('.funzionalità h2');
+
+  gsap.from(title, {
+    y: 50,
+    opacity: 0,
+    duration: 2,
+    ease: 'power4',
+    scrollTrigger: {
+      trigger: title,
+      start: 'top bottom',
+      toggleActions: 'restart pause resume pause',
+    },
   });
 
+  const cards = document.querySelectorAll('.funzionalità .card');
+
+  cards.forEach((card, index) => {
+    gsap.from(card, {
+      y: 50,
+      opacity: 0,
+      duration: 2,
+      ease: 'power4',
+      scrollTrigger: {
+        trigger: card,
+        start: 'top bottom',
+        toggleActions: 'restart pause resume pause',
+        delay: index * 0.5 + 4,
+      },
+    });
+  });
+}
+
+function initEsempi() {
+
+  // Check if the screen width is greater than or equal to 1200px
+const isLargeScreen = window.innerWidth >= 1200;
+
+// Check if it's a large screen and apply scroll trigger
+if (isLargeScreen) {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".esempi",
@@ -101,8 +179,8 @@ function initEsempi() {
       scrub: true,
       start: "top top",
       end: "+=3000",
-      toggleActions: "restart pause resume pause"
-    }
+      toggleActions: "restart pause resume pause",
+    },
   });
 
 
@@ -180,6 +258,35 @@ function initEsempi() {
       "+=10"
     )
 
+} else {
+  // For smaller screens, handle click events to open slides
+  gsap.utils.toArray(".slick-nav").forEach((a, i) => {
+    a.clickElem = document.querySelector(a.hash);
+    a.offset = a.clickElem.offsetTop;
+    a.height = a.clickElem.offsetHeight;
+  
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+  
+      gsap.utils.toArray(".esempi [data-slide]").forEach((slide, index) => {
+        // Check if the clicked element corresponds to this slide
+        const isClickedSlide = index === i;
+  
+        if (isClickedSlide) {
+          // Apply specific styles to the clicked slide
+          slide.classList.add("clicked");
+          slide.classList.remove("not-clicked");
+        } else {
+          // Remove the clicked class from other slides
+          slide.classList.remove("clicked");
+          slide.classList.add("not-clicked");
+        }
+      });
+    });
+  });
+  
+}
+  
 }
 
 function initArchitettura() {
