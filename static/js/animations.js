@@ -166,7 +166,19 @@ function initFunzionalita() {
 
 function initEsempi() {
 
-  // Check if the screen width is greater than or equal to 1200px
+  gsap.from(['.esempi h2', '.esempi .row'], {
+    x: 100,
+    opacity: 0,
+    duration: 2,
+    ease: 'power4',
+    scrollTrigger: {
+      trigger: '.esempi',
+      start: 'top center', 
+      toggleActions: 'restart pause resume pause'
+    }
+  });
+
+// Check if the screen width is greater than or equal to 1200px
 const isLargeScreen = window.innerWidth >= 1200;
 
 // Check if it's a large screen and apply scroll trigger
@@ -257,6 +269,8 @@ if (isLargeScreen) {
       },
       "+=10"
     )
+
+
 
 } else {
   // For smaller screens, handle click events to open slides
