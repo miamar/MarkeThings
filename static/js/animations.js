@@ -1,4 +1,4 @@
-function initIntro() {
+function initHero() {
 
     let tl = gsap.timeline({delay: 0.5});
      
@@ -24,6 +24,28 @@ function initIntro() {
         color: '#A2CA66',
         duration: 0.5,
     }, 1)
+
+}
+
+function initIntro() { 
+
+  const cardTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.intro', 
+      start: 'center bottom'
+    },
+  });
+  
+  const cards = document.querySelectorAll('.intro .col-12');
+
+  cards.forEach((card, index) => {
+    cardTimeline.from(card, {
+      x: -20, 
+      opacity: 0,
+      duration: 2,
+      ease: 'power4',
+    }, index * .5); 
+  });
 
 }
 
@@ -370,6 +392,7 @@ function initCaseStudies() {
 
 
 window.onload = () => {
+  initHero();
 	initIntro();
   initProblema();
   initFunzionalita();

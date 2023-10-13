@@ -17,6 +17,16 @@
     display: none;
 }
 
+/* Intro - 3 cards */
+.intro {
+    text-align: center;
+}
+.intro .title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
 /* Il problema -> la soluzione */
 .problema .row,
 .problema.scrolled .green  {
@@ -381,6 +391,10 @@
     .slick-nav {
         margin-right: 0;
     }
+
+    .intro.padding {
+        padding-bottom: 5rem!important;
+    }
 }
 
 @media all and (max-width: 992px) {
@@ -405,6 +419,11 @@
 
     .architettura .slide-container {
         display: none;
+    }
+
+    .intro.padding {
+        padding-top: 3rem!important;
+        padding-bottom: 2rem!important;
     }
 
 }
