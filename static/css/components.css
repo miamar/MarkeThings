@@ -86,13 +86,6 @@
     height: 4.5rem;
 }
 
-@media all and (max-width: 1200px) {
-
-    .funzionalità h2 {
-        font-size: 3rem;
-    }
-}
-
 /* Esempi */
 .esempi {
 	display: flex;
@@ -196,11 +189,13 @@
 	-o-transition: all .75s ease-in-out;
 }
 
-.slick-dots .slick-slide[style="opacity: 0;"] {
+.slick-dots .slick-slide[style="opacity: 0;"],
+.slick-dots .slick-slide.not-clicked  {
 	opacity: .25 !important;
 }
 
-.slick-dots .slick-slide[style="opacity: 0;"] h4 {
+.slick-dots .slick-slide[style="opacity: 0;"] h4,
+.slick-dots .slick-slide.not-clicked h4 {
 	font-weight: 500;
     font-size: 1.4rem;
 }
@@ -210,17 +205,20 @@
 	display: none;
 }
 
-.slick-dots .slick-slide[style="opacity: 0;"] .slick-nav {
+.slick-dots .slick-slide[style="opacity: 0;"] .slick-nav,
+.slick-dots .slick-slide.not-clicked .slick-nav {
     background-color: transparent;
     border: 1px solid var(--white);
 }
 
-.slick-dots .slick-slide[style="opacity: 0;"] svg path{
+.slick-dots .slick-slide[style="opacity: 0;"] svg path,
+.slick-dots .slick-slide.not-clicked svg path {
     fill: none;
     stroke: var(--white);
 }
 
-.slick-dots .slick-slide[style="opacity: 0;"] .drop .p-medium {
+.slick-dots .slick-slide[style="opacity: 0;"] .drop .p-medium,
+.slick-dots .slick-slide.not-clicked .drop .p-medium  {
     color: var(--white);
     display: block;
 }
@@ -372,6 +370,17 @@
 .swiper-pagination-bullet-active {
     background: var(--primary)!important;
     opacity: 1!important;
+}
+
+@media all and (max-width: 1200px) {
+
+    .funzionalità h2 {
+        font-size: 3rem;
+    }
+
+    .slick-nav {
+        margin-right: 0;
+    }
 }
 
 @media all and (max-width: 992px) {
