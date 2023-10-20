@@ -16,6 +16,7 @@ function initHero() {
     }, 0.1)
     .from('.hero img', {
         y: 200,
+        scale: -1.5,
         opacity: 0,
         duration: 2,
         ease: 'power4'
