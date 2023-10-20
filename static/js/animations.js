@@ -391,6 +391,31 @@ function initCaseStudies() {
 
 }
 
+function initFooter() {
+
+  let footerTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: 'footer',
+      start: 'top center', 
+      toggleActions: 'restart pause resume pause'
+    },
+  });
+  
+  footerTimeline.from(['footer .titolo', 'footer .testo', 'footer .logo'], {
+    x: -100,
+    opacity: 0,
+    duration: 1,
+    ease: 'power4',
+  })
+
+  footerTimeline.from('footer .drop', {
+    scale: -1,
+    opacity: 0,
+    duration: 1,
+  })
+
+}
+
 
 window.onload = () => {
   initHero();
@@ -401,4 +426,5 @@ window.onload = () => {
   initEsempi();
   initArchitettura();
   initCaseStudies();
+  initFooter();
 };
