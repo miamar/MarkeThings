@@ -70,9 +70,9 @@ function initProblema() {
 
 }
 
-function initFunzionalita() {
+function initMarketing() {
 
-  const title = document.querySelector('.funzionalità h2');
+  const title = document.querySelector('.marketing h2');
 
   gsap.from(title, {
     y: 50,
@@ -86,7 +86,7 @@ function initFunzionalita() {
     },
   });
 
-  const cards = document.querySelectorAll('.funzionalità .card');
+  const cards = document.querySelectorAll('.marketing .col-12');
 
   cards.forEach((card, index) => {
     gsap.from(card, {
@@ -397,6 +397,7 @@ window.onload = () => {
 	initIntro();
   initProblema();
   initFunzionalita();
+  initMarketing()
   initEsempi();
   initArchitettura();
   initCaseStudies();

@@ -109,6 +109,32 @@
     height: 4.5rem;
 }
 
+/* Marketing */
+.marketing {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.60) 100%), url('/static/img/marketing-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-color: lightgray;
+}
+
+.marketing .container {
+    border-radius: .7rem;
+    background: linear-gradient(97deg, #FB661D -0.02%, rgba(215, 83, 16, 0.85) -0.02%, rgba(191, 67, 6, 0.85) 100%);
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+}
+
+.marketing h2 {
+    color: var(--white);
+}
+
+.marketing .p-medium {
+    color: var(--white);
+}
+
+.marketing .col-12 {
+    padding: 1rem 2rem;
+}
+
 /* Esempi */
 .esempi {
 	display: flex;
@@ -288,6 +314,10 @@
 	transition: opacity .3s ease-in;
 }
 
+.architettura .swiper.mySwiperMobile:hover {
+   cursor: pointer;
+}
+
 .architettura .swiper.mySwiperMobile {
     display: none;
 }
@@ -397,7 +427,8 @@
 
 @media all and (max-width: 1200px) {
 
-    .funzionalità h2 {
+    .funzionalità h2,
+    .marketing h2 {
         font-size: 3rem;
     }
 
@@ -460,7 +491,8 @@
 
 @media all and (max-width: 576px) {
 
-    .funzionalità .row {
+    .funzionalità .row,
+    .marketing .container {
         border-radius: 0rem;
         border: none;
     }

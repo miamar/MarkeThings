@@ -29,6 +29,10 @@ body {
 }
 
 /* Testo */
+b {
+    letter-spacing: 0.04rem;
+}
+
 h1 {
     color: var(--black);
     font-size: 5rem;
