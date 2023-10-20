@@ -30,16 +30,22 @@
 /* Il problema -> la soluzione */
 .problema .row,
 .problema.scrolled .green  {
-    border-radius: .7rem;
-    background-color: var(--light);
+  
+    background-color: var(--white);
 }
 
-.problema.scrolled .row {
+.problema .col-lg-6.right,
+.problema .col-lg-6.green  {
+    border-radius: .7rem;
+}
+
+.problema.scrolled .col-lg-6.right {
     background-color: var(--infofactory);
 }
 
 .problema h3 {
     text-transform: uppercase;
+    color: var(--infofactory);
 }
 
 .problema .p-big,
@@ -60,19 +66,26 @@
 
 .problema b {
     font-weight: 600!important;
+    color: var(--infofactory);
 }
 
 .problema .green {
     background-color: var(--infofactory);
-    border-radius: .7rem;
+    
+}
+
+.problema.scrolled .green b {
+    color: var(--infofactory);
 }
 
 .problema .green h3,
 .problema .green .p-big,
 .problema .green .p-medium,
+.problema .green b,
 .problema.scrolled h3,
 .problema.scrolled .p-big,
-.problema.scrolled .p-medium{
+.problema.scrolled .p-medium,
+.problema.scrolled .right b {
     color: var(--white);
 }
 
