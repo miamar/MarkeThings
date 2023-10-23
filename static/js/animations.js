@@ -104,35 +104,6 @@ function initMarketing() {
   });
 }
 
-function initEsempi() {
-
-  let tl = gsap.timeline({delay: 0.5});
-     
-    tl.from('.hero h1', {
-        y: -40,
-        opacity: 0,
-        duration: 2,
-        ease: 'power4'
-    })
-    .from('.hero .p-big', {
-        y: -20,
-        opacity: 0,
-        duration: 2,
-        ease: 'power4'
-    }, 0.1)
-    .from('.hero img', {
-        y: 200,
-        opacity: 0,
-        duration: 2,
-        ease: 'power4'
-    }, 0.1)
-    .to('.hero span', {
-        color: '#A2CA66',
-        duration: 0.5,
-    }, 1)
-
-}
-
 function initProblema() {
 
     gsap.from(".problema", {
@@ -293,9 +264,19 @@ if (isLargeScreen) {
       "+=10"
     )
 
-
-
 } else {
+  const slideElements = document.querySelectorAll(".slick-slide");
+  
+  slideElements.forEach((slide, index) => {
+    if (index === 0) {
+      // Set the first slide as "clicked"
+      slide.classList.add("clicked");
+    } else {
+      // Set all other slides as "not-clicked"
+      slide.classList.add("not-clicked");
+    }
+  });
+    
   // For smaller screens, handle click events to open slides
   gsap.utils.toArray(".slick-nav").forEach((a, i) => {
     a.clickElem = document.querySelector(a.hash);
