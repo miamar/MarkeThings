@@ -343,6 +343,11 @@
     height: 100%;
 }
 
+.swiper:hover .swiper-button-next,
+.swiper:hover .swiper-button-prev {
+    visibility: visible;
+}
+
 .swiper-slide {
     background: #fff;
     height: 100%;
@@ -425,6 +430,12 @@
     opacity: 1!important;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+    visibility: hidden;
+    color: var(--grey)!important;
+}
+
 @media all and (min-width: 1200px) {
 
     .marketing h2 {
@@ -496,7 +507,7 @@
 @media all and (max-width: 768px) {
 
     .hero h1 {
-      font-size: 4rem;
+      font-size: 3.8rem;
     }
 
     .hero .p-big {
@@ -518,8 +529,30 @@
         border: none;
     }
 
+    .marketing .container {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+
+    .marketing {
+        padding: 0;
+    }
+
     .marketing h2 {
         font-size: 3.3rem;
+    }
+
+    .swiper-slide h2 {
+        font-size: 3.2rem
+    }
+
+    .swiper-slide h4 {
+        font-size: 1.4rem
+    }
+
+    .swiper-slide .p-big {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
     }
 
     .slick-dots .slick-slide.clicked .slick-nav {
@@ -532,5 +565,4 @@
     }
 
 }
-
 
