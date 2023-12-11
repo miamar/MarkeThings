@@ -19,8 +19,10 @@ footer .p-small {
     color: var(--white);
 }
 
-footer a:hover {
+
+footer a:hover img {
     opacity: .8;
+    cursor: pointer;
 }
 
 @media all and (min-width: 1200px) {
