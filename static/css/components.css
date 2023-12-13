@@ -363,6 +363,10 @@
     margin-bottom: 3rem;
 }
 
+.swiper-slide .loghi a:hover {
+    opacity: .8;
+}
+
 .swiper-slide .loghi img {
     min-height: 2rem;
     max-height: 3rem;
