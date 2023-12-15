@@ -21,6 +21,7 @@
 .intro {
     text-align: center;
 }
+
 .intro .title {
     font-size: 2.2rem;
     font-weight: 600;
@@ -360,6 +361,10 @@
 
 .swiper-slide .loghi {
     display: flex;
+    flex-wrap: wrap;
+}
+
+.swiper-slide .loghi img {
     margin-bottom: 3rem;
 }
 
@@ -513,7 +518,8 @@
 @media all and (max-width: 768px) {
 
     .hero h1 {
-      font-size: 3.8rem;
+      font-size: 3.4rem;
+      line-height: 3.8rem;
     }
 
     .hero .p-big {
@@ -544,12 +550,12 @@
         padding: 0;
     }
 
-    .marketing h2 {
-        font-size: 3.3rem;
+    .marketing .col-12 {
+        padding: 1rem 1rem;
     }
 
-    .swiper-slide h2 {
-        font-size: 3.2rem
+    .swiper-slide {
+        padding: 2rem;
     }
 
     .swiper-slide h4 {
@@ -561,6 +567,10 @@
         line-height: 1.8rem;
     }
 
+    .swiper-slide .loghi img {
+        margin-bottom: 2rem;
+    }
+
     .slick-dots .slick-slide.clicked .slick-nav {
         flex-direction: column;
         align-items: flex-start;
@@ -568,6 +578,11 @@
 
     .slick-dots .slick-slide.clicked .slick-nav .drop {
         margin-bottom: 1rem;
+    }
+
+    .intro .title {
+        font-size: 2rem;
+        line-height: 2.8rem;
     }
 
 }

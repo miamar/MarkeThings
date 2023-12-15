@@ -41,17 +41,30 @@ footer a:hover img {
 
 }
 
-@media all and (max-width: 576px) {
+@media all and (max-width: 992px) {
 
     footer .titolo {
         font-size: 5rem;
         line-height: 5.5rem; 
+    }
+    
+    footer .drop {
+        height: 3.5rem;
+    }
+}
+
+@media all and (max-width: 576px) {
+
+    footer .titolo {
+        font-size: 3.8rem;
+        line-height: 4.6rem; 
     }
 
     footer .testo {
         font-size: 2rem;
         line-height: 3rem; 
     }
+    
 }
 
 
